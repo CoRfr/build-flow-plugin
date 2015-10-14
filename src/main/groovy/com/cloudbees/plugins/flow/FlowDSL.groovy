@@ -390,6 +390,11 @@ public class FlowDelegate {
                 return;
             }
 
+            if (flowRun.parent.state.result == Result.ABORTED) {
+                println("} // parent aborted");
+                return;
+            }
+
             println("} // failed")
         }
     }
